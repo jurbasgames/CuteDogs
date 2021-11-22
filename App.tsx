@@ -1,21 +1,62 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { createStackNavigator } from '@react-navigation/stack'
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import {
+  Home,
+  Favorites,
+  Profile
+} from './src/screens'
+import { Entypo, Feather } from '@expo/vector-icons'
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer >
+      <Tab.Navigator screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: '#305865',
+        tabBarInactiveTintColor: '#112025',
+        tabBarStyle:{
+          backgroundColor: '#16BAC6', 
+          padding:5,
+        }
+      }}
+        >
+      
+        <Tab.Screen 
+        name="Favorites" 
+        component={Favorites}
+        options={{
+          tabBarIcon: ({size, color}) => (
+            <Entypo name='heart' size={size} color={color}/>
+
+          )
+        }}
+        />
+        <Tab.Screen 
+        name="Home" 
+        component={Home}
+        options={{
+          tabBarIcon: ({size, color}) => (
+            <Entypo name='home' size={size} color={color}/>
+
+          )
+        }} />
+        <Tab.Screen 
+        name="Profile" 
+        component={Profile}
+        options={{
+          tabBarIcon: ({size, color}) => (
+            <Entypo name='user' size={size} color={color}/>
+
+          )
+        }}
+         />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+

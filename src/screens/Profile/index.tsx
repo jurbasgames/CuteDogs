@@ -1,11 +1,9 @@
 import React from "react"
 import { Text, View } from "react-native"
 import { Header } from '../../components/index';
-const  Favorites = () => {
+const  Profile = () => {
     return(
-        <View>
-            <Header /><Text>Olamundo</Text>
-        </View>
+        <View><Header /><Text>Profile</Text></View>
         )
     }
-export default Favorites;
+export default Profile
