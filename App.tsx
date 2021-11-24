@@ -7,7 +7,7 @@ import {
   Favorites,
   Profile
 } from './src/screens'
-import { Entypo, Feather } from '@expo/vector-icons'
+import { Entypo } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator();
 
