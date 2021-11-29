@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import {
@@ -8,27 +7,11 @@ import {
   Profile
 } from './src/screens'
 import { Entypo } from '@expo/vector-icons'
-import api from './src/services/api'
+
 
 const Tab = createBottomTabNavigator();
 
-interface Deck {
-  id: number;
-  url: string;
-  categories?: any;
-  breeds?: any;
-}
-
-
 export default function App() {
-  const [deck, setDeck] = useState<Deck[]>([]);
-
-    useEffect(() => {
-        api.get('/images/search?limit=10').then(response => {
-            console.log(response.data)
-            setDeck(response.data);
-        })
-    }, []);
   return (
     <NavigationContainer >
       <Tab.Navigator initialRouteName={"Profile"}
