@@ -1,5 +1,6 @@
 import React from 'react'
-import { Image, StyleSheet, TouchableOpacity } from 'react-native'
+import { Image, TouchableOpacity } from 'react-native'
+import styles from './styles'
 
 
 export default function Header() {
@@ -10,16 +11,4 @@ export default function Header() {
     )
 }
 
-const styles = StyleSheet.create({
-    image: {
-        width: 50,
-        height: 50,
-        marginBottom: 8,
 
-    },
-    button:{
-        display: 'flex',
-        alignItems: "center",
-        margin:12,
-    }
-})

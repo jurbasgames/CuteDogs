@@ -1,5 +1,3 @@
-import React from 'react'
-import { Image, StyleSheet } from 'react-native'
 import styled from "styled-components/native";
 import {
   widthPercentageToDP as wp,

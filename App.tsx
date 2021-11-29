@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer >
-      <Tab.Navigator initialRouteName={"Profile"}
+      <Tab.Navigator initialRouteName={"Home"}
       screenOptions={{
         headerShown: false,
         
@@ -29,11 +29,11 @@ export default function App() {
         >
       
         <Tab.Screen 
-        name="Favorites" 
-        component={Favorites}
+        name="Profile" 
+        component={Profile}
         options={{
           tabBarIcon: ({size, color}) => (
-            <Entypo name='heart' size={size} color={color}/>
+            <Entypo name='user' size={size} color={color}/>
 
           )
         }}
@@ -48,11 +48,11 @@ export default function App() {
           )
         }} />
         <Tab.Screen 
-        name="Profile" 
-        component={Profile}
+        name="Favorites" 
+        component={Favorites}
         options={{
           tabBarIcon: ({size, color}) => (
-            <Entypo name='user' size={size} color={color}/>
+            <Entypo name='heart' size={size} color={color}/>
 
           )
         }}

@@ -4,7 +4,7 @@ import { Header } from '../../components/index';
 const  Favorites = () => {
     return(
         <View>
-            <Header /><Text>Olamundo</Text>
+            <Header /><Text>Favorites</Text>
         </View>
         )
     }
