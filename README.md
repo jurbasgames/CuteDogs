@@ -5,7 +5,7 @@
 CuteDogs is and image app using TheDogAPI
 
 ## Requirements
-
+    
 Before start, check if you have:
 
 - Yarn
@@ -15,11 +15,11 @@ Before start, check if you have:
 
 ### Clone the folder.
 ```
-$ git clone https://gitlab.com/jpduarte/civitas-squad-vapt-vupt
+$ git clone https://github.com/jurbasgames/CuteDogs
 ```
 ### Access it.
 ```
-$ cd civitas-squad-vapt-vupt
+$ cd CuteDogs
 ```
 ### Install dependecies
 ```
